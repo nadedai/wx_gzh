@@ -6,7 +6,14 @@ FROM maven:3.6.0-jdk-8-slim as build
 WORKDIR /app
 
 # 将src目录下所有文件，拷贝到工作目录中src目录下（.gitignore/.dockerignore中文件除外）
-COPY src /app/src
+COPY src /app/joolun-admin
+COPY src /app/joolun-common
+COPY src /app/joolun-framework
+COPY src /app/joolun-generator
+COPY src /app/joolun-mall
+COPY src /app/joolun-quartz
+COPY src /app/joolun-system
+COPY src /app/joolun-weixin
 
 # 将pom.xml文件，拷贝到工作目录下
 COPY settings.xml pom.xml /app/
