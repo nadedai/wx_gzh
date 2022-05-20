@@ -3,6 +3,10 @@ package com.joolun;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * web容器中进行部署
  * 
@@ -15,4 +19,5 @@ public class JooLunServletInitializer extends SpringBootServletInitializer
     {
         return application.sources(JooLunWxApplication.class);
     }
+
 }

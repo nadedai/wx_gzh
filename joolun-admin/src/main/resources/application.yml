@@ -12,7 +12,7 @@ ruoyi:
 # 开发环境配置
 server:
   # 服务器的HTTP端口，默认为7500
-  port: 80
+  port: 8087
   servlet:
     # 应用的访问路径
     context-path: /
@@ -123,10 +123,10 @@ wx:
   # 公众号配置
   mp:
     configs:
-      - appId: xxxxxxxx
-        secret: xxxxxxxxxxxxxxxxxxxxxxxxxx
-        token: xxxxxxxxxx
-        aesKey: xxxxxxxxxxxxxxxxxxxx
+      - appId: wx3feec00966db8e12
+        secret: 22874950189712345dc751ee88cd1ac0
+        token: 4UJUdxJukuF1PV8BVgdyIPvm
+        aesKey: gVaC9tAfRfbLsAR1492byWod5VlXF2MCncaG0c7iixn
   # 小程序配置
   ma:
     configs:
