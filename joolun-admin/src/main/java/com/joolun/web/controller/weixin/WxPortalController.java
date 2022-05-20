@@ -86,7 +86,7 @@ public class WxPortalController {
         if (!wxService.checkSignature(timestamp, nonce, signature)) {
             throw new IllegalArgumentException("非法请求，可能属于伪造的请求！");
         }
-
+        log.info("hello");
         String out = null;
         if (encType == null) {
             // 明文传输的消息
