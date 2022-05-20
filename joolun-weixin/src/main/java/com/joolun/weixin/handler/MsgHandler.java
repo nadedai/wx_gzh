@@ -35,6 +35,7 @@ import com.joolun.weixin.mapper.WxUserMapper;
 import com.joolun.weixin.service.WxAutoReplyService;
 import com.joolun.weixin.service.WxMsgService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.session.WxSessionManager;
 import me.chanjar.weixin.mp.api.WxMpService;
@@ -52,6 +53,8 @@ import static me.chanjar.weixin.common.api.WxConsts.XmlMsgType;
 /**
  * @author www.joolun.com
  */
+
+@Slf4j
 @Component
 @AllArgsConstructor
 public class MsgHandler extends AbstractHandler {
@@ -115,6 +118,7 @@ public class MsgHandler extends AbstractHandler {
      */
     public static WxMpXmlOutMessage getWxMpXmlOutMessage(WxMpXmlMessage wxMessage, List<WxAutoReply> listWxAutoReply, WxUser wxUser,
                                                          WxMsgService wxMsgService){
+        log.info("wxUser" + wxUser);
         WxMpXmlOutMessage wxMpXmlOutMessage = null;
         //记录接收消息
         WxMsg wxMsg = new WxMsg();

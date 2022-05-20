@@ -1,7 +1,7 @@
 # 项目相关配置
 ruoyi:
   # 实例演示开关
-  demoEnabled: true
+  demoEnabled: false
   # 文件路径 示例（ Windows配置D:/joolun/uploadPath，Linux配置 /home/joolun/uploadPath）
   profile: D:/joolun/uploadPath
   # 获取ip地址开关
@@ -53,7 +53,7 @@ spring:
   # redis 配置
   redis:
     # 地址
-    host: s5.z100.vip
+    host: 116.62.20.200
     # 端口，默认为6379
     port: 6379
     # 数据库索引
@@ -108,7 +108,7 @@ swagger:
   # 是否开启swagger
   enabled: true
   # 请求前缀
-  pathMapping: /dev-api
+  pathMapping: /
 
 # 防止XSS攻击
 xss: 
@@ -123,8 +123,10 @@ wx:
   # 公众号配置
   mp:
     configs:
-      - appId: wx3feec00966db8e12
-        secret: 22874950189712345dc751ee88cd1ac0
+      - appId: wx96d8088eda2c6fa6
+#      - appId: wx3feec00966db8e12
+        secret: 75750f8f08a8261ea3412ad7b498cc33
+#        secret: 22874950189712345dc751ee88cd1ac0
         token: 4UJUdxJukuF1PV8BVgdyIPvm
         aesKey: gVaC9tAfRfbLsAR1492byWod5VlXF2MCncaG0c7iixn
   # 小程序配置

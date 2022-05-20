@@ -86,7 +86,6 @@ public class WxPortalController {
         if (!wxService.checkSignature(timestamp, nonce, signature)) {
             throw new IllegalArgumentException("非法请求，可能属于伪造的请求！");
         }
-        log.info("hello");
         String out = null;
         if (encType == null) {
             // 明文传输的消息
@@ -95,7 +94,6 @@ public class WxPortalController {
             if (outMessage == null) {
                 return "";
             }
-
             out = outMessage.toXml();
         } else if ("aes".equalsIgnoreCase(encType)) {
             // aes加密的消息
@@ -106,10 +104,8 @@ public class WxPortalController {
             if (outMessage == null) {
                 return "";
             }
-
             out = outMessage.toEncryptedXml(wxService.getWxMpConfigStorage());
         }
-
         log.debug("\n组装回复信息：{}", out);
         return out;
     }
