@@ -20,6 +20,7 @@ COPY settings.xml pom.xml /app/
 
 # 执行代码编译命令
 # 自定义settings.xml, 选用国内镜像源以提高下载速度
+RUN yum install dejavu-sans-fonts fontconfig -y
 RUN mvn -s /app/settings.xml -f /app/pom.xml clean package
 
 # 选择运行时基础镜像
